@@ -18,23 +18,12 @@ body {
     background-repeat: no-repeat;
 }
 
-.container {
-    width: 50%;
-    max-width: 800px;
-    margin: 2rem auto;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(146, 62, 191, 0.2);
-}
-
 header {
     margin-bottom: 2rem;
+
 }
 
-
-
+/* Text Styling */
 h1 {
     color: #ebb328;
     margin-bottom: 0.5rem;
@@ -47,6 +36,18 @@ h1 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+
+/* Text and Card Container */
+.container {
+    width: 50%;
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+
+    padding: 2rem;
+}
+
+/* Card and Frame */
 .card-frame {
     max-width: 300px;
     max-height: 500px;
@@ -108,6 +109,59 @@ h1 {
     box-shadow: 0 0 25px rgba(146, 62, 191, 0.5);
 }
 
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top right, #2c1b47, #462b6c);
+}
+
+.popup.show {
+    display: flex;
+}
+
+.popup-content {
+    padding: 2rem;
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+}
+
+.popup-content p {
+    color: #ebb328;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.popup-content button {
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #ebb328;
+    background-color: rgba(145, 60, 190, 0.4);
+    border: 0px groove #ebb328;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: smoothPulseGlow 2.5s ease-out infinite;
+
+}
+
+.popup-content button:hover {
+    background-color: rgba(145, 60, 190, 0.6);
+    transform: translateY(-2px);
+}
+
+
+
 @media (max-width: 480px) {
 
     .container {
@@ -115,6 +169,7 @@ h1 {
         background-color: rgba(255, 255, 255, 0.0);
         border-radius: 0px;
         box-shadow: 0 0 20px rgba(146, 62, 191, 0.0);
+        animation: hidden;
     }
 
     h1 {
@@ -138,10 +193,28 @@ h1 {
         max-width: 250px;
         max-height: 400px;
     }
+
+    .card-button:hover {
+        animation: smoothPulseGlowGoldSmall 4s ease-in-out infinite;
+    }
 }
 
+/* Animations */
 @keyframes smoothPulseGlow {
     0% { box-shadow: 0 0 30px rgba(146, 62, 191, 0.2); }
     50% { box-shadow: 0 0 100px rgba(146, 62, 191, 0.8); }
     100% { box-shadow: 0 0 30px rgba(146, 62, 191, 0.2); }
 }
+
+@keyframes smoothPulseGlowGold {
+    0% { box-shadow: 0 0 30px rgba(228, 181, 10, 0.2); }
+    50% { box-shadow: 0 0 100px rgba(228, 181, 10, 0.8); }
+    100% { box-shadow: 0 0 30px rgba(228, 181, 10, 0.2); }
+}
+
+@keyframes smoothPulseGlowGoldSmall {
+    0% { box-shadow: 0 0 10px rgba(228, 181, 10, 0.2); }
+    50% { box-shadow: 0 0 30px rgba(228, 181, 10, 0.8); }
+    100% { box-shadow: 0 0 10px rgba(228, 181, 10, 0.2); }
+}
+
