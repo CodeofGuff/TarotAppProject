@@ -124,6 +124,10 @@ h1 {
         margin-bottom: 3rem;
     }
 
+    .card-info {
+        margin-top: 3rem;
+    }
+
     .card-description {
         font-size: 1rem;
     }
@@ -137,7 +141,7 @@ h1 {
 }
 
 @keyframes smoothPulseGlow {
-    0% { box-shadow: 0 0 60px rgba(146, 62, 191, 0.2); }
+    0% { box-shadow: 0 0 30px rgba(146, 62, 191, 0.2); }
     50% { box-shadow: 0 0 100px rgba(146, 62, 191, 0.8); }
-    100% { box-shadow: 0 0 20px rgba(146, 62, 191, 0.2); }
+    100% { box-shadow: 0 0 30px rgba(146, 62, 191, 0.2); }
 }
