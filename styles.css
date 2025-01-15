@@ -114,12 +114,13 @@ h1 {
     transition: all 0.3s ease;
     background-color: rgba(145, 60, 190, 0.4);
     box-shadow: 0 0 15px rgba(146, 62, 191, 0.3);
-    animation: smoothPulseGlowGold 4s ease-in-out infinite;
 }
 
 .card-button:hover {
     transform: translateY(-7px);
     box-shadow: 0 0 25px rgba(146, 62, 191, 0.5);
+    animation: smoothPulseGlowGold 4s ease-in-out infinite;
+
 }
 
 /* Popup */
@@ -206,10 +207,10 @@ h1 {
         max-height: 80%;
         padding: 0 1rem;
     }
-    
+
 
     .card-button:hover {
-        animation: smoothPulseGlowGoldSmall 4s ease-in-out infinite;
+        animation: smoothPulseGlowGold 4s ease-in-out infinite;
     }
 }
 
