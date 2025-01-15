@@ -4,7 +4,9 @@ A simple Tarot card reading application that helps users understand card meaning
 This is not meant to be a complex "meta" Tarot application. <br >
 Instead, it focuses on being an educational tool to help users understand the meanings and interpretations of Tarot cards in a straightforward way.
 
+<a href="https:gufftarot.netlify.app/">
 <img src="assets/tarot-site-screenshot.png" alt="Tarot Screenshot" width="350" height="500">
+</a>
 
 ## About
 
@@ -23,6 +25,7 @@ This project is being developed as part of a Codecademy course. It provides a st
 - HTML
 - CSS
 - JavaScript
+- Netlify (for deployment)
 
 ## Future Features
 
