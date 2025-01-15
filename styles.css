@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    line-height: 1.4;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -45,7 +45,7 @@ h1 {
     margin-top: 2rem;
 }
 
-.card-frame {
+.card-frame{
     max-width: 300px;
     max-height: 500px;
     margin: 0 auto 2rem;
@@ -53,28 +53,33 @@ h1 {
     justify-content: center;
     align-items: center;
     background-color: white;
-    border: 5px solid #89c1f5;
+    border: 15px solid #89c1f5;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(137, 193, 245, 0.6);
 }
-
-.card-placeholder {
-    color: #3d84bc;
-    font-size: 1.2rem;
+.card-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(137, 193, 245, 0.6);
 }
+
 
 .card-title {
     color: #0d4d66;
     margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
 .card-description {
     color: #1a6885;
-    line-height: 1.8;
+    line-height: 1.4;
     max-width: 300px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1rem;
 }
 
 .draw-button {
@@ -95,4 +100,16 @@ h1 {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: #c4e0f9;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle, 
+    .card-title, 
+    .card-description {
+        font-size: 0.9rem;
+    }
 }

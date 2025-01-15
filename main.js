@@ -31,16 +31,7 @@ async function drawRandomCard() {
     // Create and set up image
     const img = document.createElement('img');
     const imagePath = `./assets/${card.name}.jpg`;
-    console.log('Attempting to load image:', imagePath); // Debug log
     
-    img.onerror = () => {
-        console.error('Failed to load image:', imagePath);
-        cardFrame.innerHTML = '[Image Failed to Load]';
-    };
-    
-    img.onload = () => {
-        console.log('Image loaded successfully:', imagePath);
-    };
     
     img.src = imagePath;
     img.alt = card.name;
