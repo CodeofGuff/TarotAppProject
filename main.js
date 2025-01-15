@@ -1,6 +1,6 @@
 import { cards } from "./cards.js";
 
-function drawRandomCard() {
+async function drawRandomCard() {
   const card = cards[Math.floor(Math.random() * cards.length)];
   const cardPlaceholder = document.querySelector(".card-placeholder");
   const cardDescription = document.querySelector(".card-description");
