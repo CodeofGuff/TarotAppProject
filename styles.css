@@ -164,7 +164,7 @@ h1 {
 
 
 
-@media (max-width: 480px) {
+@media (max-width: 480px) and (max-width: 768px) {
 
     .container {
         width: 90%;
@@ -175,8 +175,9 @@ h1 {
     }
 
     h1 {
-        display: none;
+        margin-bottom: 2rem;
     }
+
     .subtitle {
         font-size: 1rem;
         margin-top: 0;
