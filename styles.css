@@ -174,50 +174,6 @@ h1 {
 }
 
 
-
-@media (max-width: 480px) and (max-width: 768px) {
-
-    .container {
-        width: 90%;
-        padding: 1rem;
-        background-color: rgba(255, 255, 255, 0.0);
-        border-radius: 0px;
-        box-shadow: 0 0 20px rgba(146, 62, 191, 0.0);
-    }
-
-    h1 {
-        margin-bottom: 2rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-        margin-top: 0;
-        margin-bottom: 2rem;
-    }
-
-    .card-description {
-        font-size: 1rem;
-        padding: 0 0.5rem;
-        margin-top: 0.5rem;
-    }
-
-    .card-frame {
-        max-width: 80%;
-        max-height: 80%;
-        padding: 0 1rem;
-    }
-
-    .card-image {
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-
-    .card-button:hover {
-        animation: smoothPulseGlowGoldSmall 4s ease-in-out infinite;
-    }
-}
-
 /* Animations */
 @keyframes smoothPulseGlow {
     0% { box-shadow: 0 0 30px rgba(146, 62, 191, 0.2); }
