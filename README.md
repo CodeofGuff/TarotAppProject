@@ -2,7 +2,7 @@
 
 A simple Tarot card reading application that helps users understand card meanings.
 
-![Tarot Site Screenshot](assets/tarot-site-screenshot.png)
+<img src="assets/tarot-site-screenshot.png" alt="Tarot Screenshot" width="300" height="200">
 
 ## About
 
