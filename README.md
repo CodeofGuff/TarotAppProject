@@ -2,6 +2,8 @@
 
 A simple Tarot card reading application that helps users understand card meanings.
 
+<img src="https://i.imgur.com/a/5YuQK4b" alt="Tarot App Screenshot" width="500">
+
 ## About
 
 This project is being developed as part of a Codecademy course. It provides a straightforward interface for users to:
