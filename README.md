@@ -2,7 +2,7 @@
 
 A simple Tarot card reading application that helps users understand card meanings.
 
-[Tarot Site Screenshot](https://imgur.com/FqfmGPp)
+[Tarot Site Screenshot](https://i.imgur.com/FqfmGPp.png)
 
 ## About
 
