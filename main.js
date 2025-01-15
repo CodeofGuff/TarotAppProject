@@ -41,6 +41,7 @@ function handleCardDraw() {
     drawRandomCard();
     clickCount = 0;
   }
+
 }
 
 // Get elements
