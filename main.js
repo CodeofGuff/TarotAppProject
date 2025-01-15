@@ -22,28 +22,29 @@ async function drawRandomCard() {
     
     // Get existing elements
     const cardFrame = document.querySelector('.card-frame');
+    const cardImage = document.querySelector('.card-image');
     const cardTitle = document.querySelector('.card-title');
     const cardDescription = document.querySelector('.card-description');
     
-    // Clear existing content
-    cardFrame.innerHTML = '';
-    
-    // Create and set up image
-    const img = document.createElement('img');
-    const imagePath = `./assets/${card.name}.jpg`;
-    
-    
-    img.src = imagePath;
-    img.alt = card.name;
-    img.style.maxWidth = '100%';
-    img.style.height = '100%';
-    img.style.objectFit = 'contain';
+    // Update image
+    cardImage.src = `./assets/${card.name}.jpg`;
+    cardImage.alt = card.name;
     
     // Update content
-    cardFrame.appendChild(img);
     cardTitle.textContent = card.name;
     cardDescription.textContent = card.meaning;
 }
 
-// Add event listener to the draw button
-document.querySelector('.draw-button').addEventListener('click', drawRandomCard);
+// Add event listeners to the card frame
+const cardFrame = document.querySelector('.card-frame');
+
+// Mouse click
+cardFrame.addEventListener('click', drawRandomCard);
+
+// Keyboard accessibility
+cardFrame.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        drawRandomCard();
+    }
+});

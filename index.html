@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarot Card Reading</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,14 +14,11 @@
         <header>
             <h1>Tarot Card Reading</h1>
             <p class="subtitle">A card to help you navigate your journey today</p>
-            <button class="draw-button">Draw a Card</button>
-
         </header>
-        
 
         <main>
             <div class="card-container">
-                <div class="card-frame">
+                <div class="card-frame clickable" role="button" tabindex="0" aria-label="Click to draw a new card">
                     <div class="card-placeholder">
                         <img class="card-image" src="./assets/The Fool.jpg" alt="The Fool">
                     </div>
@@ -26,11 +26,10 @@
                 
                 <div class="card-info">
                     <h2 class="card-title"></h2>
-                    <p class="card-description">
-                    </p>
+                    <p class="card-description"></p>
                 </div>
             </div>
-                </main>
+        </main>
     </div>
     <script src="main.js" type="module"></script>
 </body>
