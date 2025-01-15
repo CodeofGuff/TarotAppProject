@@ -6,7 +6,7 @@ function drawRandomCard() {
   const cardDescription = document.querySelector(".card-description");
 
   // Clear placeholder and create new image
-  cardPlaceholder.innerHTML = "";
+  cardPlaceholder.innerHTML = " ";
   const img = document.createElement("img");
   img.className = "card-image";
   img.src = `./assets/${card.name}.jpg`;
@@ -16,12 +16,9 @@ function drawRandomCard() {
   cardPlaceholder.appendChild(img);
   cardDescription.textContent = card.meaning;
 
-  // Handle image error
-  img.onerror = () => {
-    console.error(`Failed to load image: ${card.name}`);
-    cardPlaceholder.innerHTML = `<p>Error loading card image</p>`;
+  document.querySelector('header').style.display = 'none';
+
 };
-}
 
 function showPopup() {
   const popup = document.getElementById("popup");
