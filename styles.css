@@ -119,6 +119,7 @@ h1 {
     transition: all 0.3s ease;
     background-color: rgba(145, 60, 190, 0.4);
     box-shadow: 0 0 15px rgba(146, 62, 191, 0.3);
+    animation: smoothPulseGlowGold 2.5s ease-out infinite;
 }
 
 .card-button:hover {
