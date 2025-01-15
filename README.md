@@ -16,6 +16,7 @@ This project is being developed as part of a Codecademy course. It provides a st
 - Database of Tarot cards and their meanings
 - Simple user interface
 - Question-based interpretations
+- Major Arcana
 
 ## Purpose
 
