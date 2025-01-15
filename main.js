@@ -4,8 +4,10 @@ function drawRandomCard() {
   const card = cards[Math.floor(Math.random() * cards.length)];
   const cardPlaceholder = document.querySelector(".card-placeholder");
   const cardDescription = document.querySelector(".card-description");
+  const cardDescriptionExtra = document.querySelector(".card-description-extra");
 
   // Clear placeholder and create new image
+  document.querySelector('header').style.display = 'none';
   cardPlaceholder.innerHTML = " ";
   const img = document.createElement("img");
   img.className = "card-image";
@@ -15,8 +17,7 @@ function drawRandomCard() {
   // Add image to placeholder and update description
   cardPlaceholder.appendChild(img);
   cardDescription.textContent = card.meaning;
-
-  document.querySelector('header').style.display = 'none';
+  cardDescriptionExtra.textContent = card.extra[Math.floor(Math.random() * card.extra.length)];
 
 };
 
