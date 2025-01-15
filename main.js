@@ -30,7 +30,7 @@ async function drawRandomCard() {
     
     // Create and set up image
     const img = document.createElement('img');
-    const imagePath = `./assets/majorarcana/${card.name.toLowerCase().replace(/\s+/g, '-')}.jpg`;
+    const imagePath = `./assets/${card.name}.jpg`;
     console.log('Attempting to load image:', imagePath); // Debug log
     
     img.onerror = () => {
