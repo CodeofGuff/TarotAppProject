@@ -8,6 +8,8 @@ Instead, it focuses on being an educational tool to help users understand the me
 <img src="assets/tarot-site-screenshot.png" alt="Tarot Screenshot" width="350" height="500">
 </a>
 
+[![Tarot Screenshot](assets/tarot-site-screenshot.png)](https://gufftarot.netlify.app/)
+
 ## About
 
 This project is being developed as part of a Codecademy course. It provides a straightforward interface for users to:
