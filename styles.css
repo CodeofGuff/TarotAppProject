@@ -49,7 +49,7 @@ h1 {
 
 /* Card and Frame */
 .card-frame {
-    max-width: 300px;
+    max-width: 90%;
     max-height: 500px;
     margin: 0 auto 2rem;
     display: flex;
@@ -190,7 +190,7 @@ h1 {
     }
 
     .card-frame {
-        max-width: 200px;
+        max-width: 100%;
         max-height: 400px;
     }
 
