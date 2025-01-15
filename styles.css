@@ -195,9 +195,8 @@ h1 {
     }
 
     .card-frame {
-        max-width: 90%;
+        max-width: 80%;
         max-height: 80%;
-        margin: 1rem auto;
         padding: 0 1rem;
     }
 
