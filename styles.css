@@ -103,7 +103,7 @@ h1 {
     transition: all 0.3s ease;
     background-color: rgba(145, 60, 190, 0.4);
     box-shadow: 0 0 15px rgba(146, 62, 191, 0.3);
-
+    animation: smoothPulseGlowGold 4s ease-in-out infinite;
 }
 
 .card-button:hover {
@@ -219,14 +219,7 @@ h1 {
 }
 
 @keyframes smoothPulseGlowGold {
-    0% { box-shadow: 0 0 30px rgba(228, 181, 10, 0.2); }
-    50% { box-shadow: 0 0 100px rgba(228, 181, 10, 0.8); }
-    100% { box-shadow: 0 0 30px rgba(228, 181, 10, 0.2); }
-}
-
-@keyframes smoothPulseGlowGoldSmall {
     0% { box-shadow: 0 0 10px rgba(228, 181, 10, 0.2); }
-    50% { box-shadow: 0 0 30px rgba(228, 181, 10, 0.8); }
+    50% { box-shadow: 0 0 50px rgba(228, 181, 10, 0.8); }
     100% { box-shadow: 0 0 10px rgba(228, 181, 10, 0.2); }
 }
-
