@@ -15,6 +15,12 @@ function drawRandomCard() {
   // Add image to placeholder and update description
   cardPlaceholder.appendChild(img);
   cardDescription.textContent = card.meaning;
+
+  // Handle image error
+  img.onerror = () => {
+    console.error(`Failed to load image: ${card.name}`);
+    cardPlaceholder.innerHTML = `<p>Error loading card image</p>`;
+};
 }
 
 function showPopup() {

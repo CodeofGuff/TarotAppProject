@@ -167,12 +167,11 @@ h1 {
 @media (max-width: 480px) {
 
     .container {
-        width: 100%;
+        width: 90%;
         padding: 1rem;
         background-color: rgba(255, 255, 255, 0.0);
         border-radius: 0px;
         box-shadow: 0 0 20px rgba(146, 62, 191, 0.0);
-        animation: hidden;
     }
 
     h1 {
@@ -181,30 +180,30 @@ h1 {
     .subtitle {
         font-size: 1rem;
         margin-top: 0;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
 
     .card-info {
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
 
     .card-description {
-        font-size: 0.9rem;
-        padding: 0 1rem;
-        margin-top: 1rem;
+        font-size: 1rem;
+        padding: 0 0.5rem;
+        margin-top: 0.5rem;
     }
 
     .card-frame {
-        max-width: 100%;
-        max-height: 60vh;
+        max-width: 80%;
+        max-height: 70vh;
         margin: 1rem auto;
+        padding: 0 1rem;
     }
 
     .card-image {
         max-width: 100%;
-        max-height: 100%;
-        width: auto;
         height: auto;
+        object-fit: contain;
     }
 
     .card-button:hover {
