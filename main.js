@@ -33,7 +33,7 @@ async function drawRandomCard() {
       cardDescriptionExtra.textContent = card.extra[Math.floor(Math.random() * card.extra.length)];
       cardDescription.style.opacity = 1;
       cardDescriptionExtra.style.opacity = 1;
-    }, 5);
+    }, 150);
 
   } catch (error) {
     console.error('Error loading card:', error);
