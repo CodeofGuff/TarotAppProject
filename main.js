@@ -27,7 +27,7 @@ async function drawRandomCard() {
     cardPlaceholder.innerHTML = "";
     cardPlaceholder.appendChild(img);
 
-    // Fade in text with slight delay
+    // Fade in text with slight delay for aesthetics
     setTimeout(() => {
       cardDescription.textContent = card.meaning;
       cardDescriptionExtra.textContent = card.extra[Math.floor(Math.random() * card.extra.length)];
@@ -52,7 +52,6 @@ function hidePopup() {
 }
 
 let isCardDisplayed = false;
-
 // Handle card drawing with popup
 async function handleCardDraw() {
   if (!isCardDisplayed) {
