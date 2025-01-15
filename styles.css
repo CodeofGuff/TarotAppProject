@@ -132,6 +132,11 @@ h1 {
     .card-description {
         font-size: 1rem;
     }
+
+    .card-frame {
+        max-width: 250px;
+        max-height: 400px;
+    }
 }
 
 @keyframes smoothPulseGlow {
