@@ -21,28 +21,40 @@ async function drawRandomCard() {
     const card = cards[randomIndex];
     
     // Get existing elements
-    const cardFrame = document.querySelector('.card-frame');
-    const cardImage = document.querySelector('.card-image');
-    const cardTitle = document.querySelector('.card-title');
+    const cardPlaceholder = document.querySelector('.card-placeholder');
     const cardDescription = document.querySelector('.card-description');
     
-    // Update image
-    cardImage.src = `./assets/${card.name}.jpg`;
-    cardImage.alt = card.name;
+    // Clear placeholder and create new image
+    cardPlaceholder.innerHTML = '';
+    const img = document.createElement('img');
+    img.className = 'card-image';
+    img.src = `./assets/${card.name}.jpg`;
+    img.alt = card.name;
     
-    // Update content
-    cardTitle.textContent = card.name;
+    // Add image to placeholder
+    cardPlaceholder.appendChild(img);
+    
+    // Update description
     cardDescription.textContent = card.meaning;
 }
 
 // Add event listeners to the card frame
+const cardButton = document.querySelector('.card-button');
 const cardFrame = document.querySelector('.card-frame');
 
 // Mouse click
+cardButton.addEventListener('click', drawRandomCard);
 cardFrame.addEventListener('click', drawRandomCard);
 
 // Keyboard accessibility
 cardFrame.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        drawRandomCard();
+    }
+});
+
+cardButton.addEventListener('keypress', (event) => {
     if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
         drawRandomCard();

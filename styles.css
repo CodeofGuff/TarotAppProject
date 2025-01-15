@@ -53,23 +53,11 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 15px rgba(146, 62, 191, 0.3);
     transition: all 0.3s ease;
-}
-
-.clickable {
     cursor: pointer;
-    animation: smoothPulseGlow 4s ease-in-out infinite;
 }
 
-.clickable:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(146, 62, 191, 0.5);
-
-}
-
-.clickable:active {
+.card-frame:active {
     transform: translateY(0);
 }
 
@@ -79,7 +67,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(137, 193, 245, 0.6);
+    animation: smoothPulseGlow 4s ease-in-out infinite;
+
 }
 
 .card-title {
@@ -99,30 +88,51 @@ h1 {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
+.card-button {
+    padding: 1rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #ebb328;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: rgba(145, 60, 190, 0.4);
+    box-shadow: 0 0 15px rgba(146, 62, 191, 0.3);
+
+}
+
+.card-button:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 0 25px rgba(146, 62, 191, 0.5);
+}
+
 @media (max-width: 480px) {
 
     .container {
         width: 90%;
+        background-color: rgba(255, 255, 255, 0.0);
+        border-radius: 0px;
+        box-shadow: 0 0 20px rgba(146, 62, 191, 0.0);
     }
 
-    h1, .subtitle {
+    h1 {
         display: none;
     }
-
-    .card-title, 
-    .card-description {
+    .subtitle {
         font-size: 1rem;
+        margin-bottom: 3rem;
     }
 
-    .subtitle {
-        margin-top: 1rem;
-        color: #daa520;
+    .card-description {
+        font-size: 1rem;
     }
 
     .card-frame {
         max-width: 200px;
         max-height: 300px;
         margin: 0 auto 2rem;
+
     }
 }
 
