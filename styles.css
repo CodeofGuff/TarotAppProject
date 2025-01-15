@@ -33,10 +33,11 @@ header {
     margin-bottom: 2rem;
 }
 
+
+
 h1 {
     color: #ebb328;
     margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.3);
 }
 
 .subtitle {
@@ -132,16 +133,14 @@ h1 {
         font-size: 1rem;
     }
 
-    .card-frame {
-        max-width: 200px;
-        max-height: 300px;
-        margin: 0 auto 2rem;
-
-    }
-}
 
 @keyframes smoothPulseGlow {
     0% { box-shadow: 0 0 30px rgba(146, 62, 191, 0.2); }
     50% { box-shadow: 0 0 100px rgba(146, 62, 191, 0.8); }
     100% { box-shadow: 0 0 30px rgba(146, 62, 191, 0.2); }
+}
+
+@keyframes breatheGlow {
+    0%, 100% { box-shadow: 0 0 50px rgba(164, 160, 185, 0.2); }
+    50% { box-shadow: 0 0 70px rgba(164, 160, 185, 0.3); }
 }
