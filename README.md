@@ -1,6 +1,8 @@
 # TarotAppProject
 
-A simple Tarot card reading application that helps users understand card meanings and give a quick fortune.
+A simple Tarot card reading application that helps users understand card meanings and give a quick fortune.<br >
+This is not meant to be a complex "meta" Tarot application. <br >
+Instead, it focuses on being an educational tool to help users understand the meanings and interpretations of Tarot cards in a straightforward way.
 
 <img src="assets/tarot-site-screenshot.png" alt="Tarot Screenshot" width="350" height="500">
 
@@ -15,10 +17,6 @@ This project is being developed as part of a Codecademy course. It provides a st
 - Simple user interface
 - Major Arcana
 
-## Purpose
-
-This is not meant to be a complex "meta" Tarot application. 
-Instead, it focuses on being an educational tool to help users understand the meanings and interpretations of Tarot cards in a straightforward way.
 
 ## Technologies Used
 
