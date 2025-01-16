@@ -11,11 +11,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2c1b47;
-    background-image: linear-gradient(to top right, #2c1b47, #462b6c);
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.35)
+    ), url(./assets/background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: #1a1a1a;
 }
 
 header {
@@ -25,15 +28,17 @@ header {
 
 /* Text Styling */
 h1 {
-    color: #ebb328;
+    color: rgb(235, 179, 40);
     margin-bottom: 0.5rem;
+    text-shadow: 0px 0px 10px rgb(188, 142, 27);
 }
 
 .subtitle {
     color: #daa520;
     font-size: 1.1rem;
     margin-top: 2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 0px 10px rgb(188, 142, 27);
+
 }
 
 
@@ -45,6 +50,7 @@ h1 {
     text-align: center;
 
     padding: 2rem;
+
 }
 
 /* Card and Frame */
@@ -67,6 +73,7 @@ h1 {
     margin-top: 2rem;
     margin-bottom: 2rem;
     width: 100%;
+    
 }
 .card-info-extra {
     margin-top: 2rem;
@@ -103,9 +110,10 @@ h1 {
     text-align: center;
     margin: 0 auto;
     font-size: 1rem;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    text-shadow: 0px 0px 10px rgb(188, 142, 27);
+
 }
 
 .card-button {
@@ -114,10 +122,10 @@ h1 {
     font-size: 1.2rem;
     color: #ebb328;
     border: none;
-    border-radius: 8px;
+    border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background-color: rgba(145, 60, 190, 0.4);
+    background-color: rgba(145, 60, 190, 0.7);
     box-shadow: 0 0 15px rgba(146, 62, 191, 0.3);
     animation: smoothPulseGlowGold 2.5s ease-out infinite;
 }
@@ -140,7 +148,7 @@ h1 {
     z-index: 1000;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to top right, #2c1b47, #462b6c);
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 .popup.show {
@@ -158,6 +166,8 @@ h1 {
     color: #ebb328;
     margin-bottom: 1.5rem;
     font-size: 1.2rem;
+    text-shadow: 0px 0px 10px rgb(188, 142, 27);
+
 }
 
 .popup-content button {
@@ -166,23 +176,24 @@ h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     color: #ebb328;
-    background-color: rgba(145, 60, 190, 0.4);
+    background-color: rgba(145, 60, 190, 0.7);
     border: 0px groove #ebb328;
-    border-radius: 8px;
+    border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
-    animation: smoothPulseGlowGold 2.5s ease-out infinite;
 
 }
 
 .popup-content button:hover {
-    background-color: rgba(145, 60, 190, 0.6);
+    background-color: rgba(145, 60, 190, 0.9);
     transform: translateY(-2px);
+    animation: smoothPulseGlowGold 2.5s ease-out infinite;
+
 }
 
 
 
-@media (max-width: 480px) and (max-width: 768px) {
+@media (max-width: 480px) {
 
     .container {
         width: 90%;
@@ -206,6 +217,7 @@ h1 {
         font-size: 1rem;
         padding: 0 0.5rem;
         margin-top: 0.5rem;
+        
     }
 
     .card-frame {
@@ -220,10 +232,54 @@ h1 {
     }
 }
 
+/* New media query for tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card-frame {
+        max-width: 85%;
+        max-height: 70vh;
+        margin: 1rem auto;
+    }
+
+    .card-description, .card-description-extra {
+        max-width: 450px;
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .popup-content {
+        width: 80%;
+        padding: 2rem;
+    }
+
+    .popup-content p {
+        font-size: 1.1rem;
+    }
+
+    .card-button {
+        padding: 0.9rem 1.8rem;
+        font-size: 1.1rem;
+    }
+}
+
 /* Animations */
 @keyframes smoothPulseGlow {
     0% { 
-        box-shadow: 0 0 30px rgba(146, 62, 191, 0.2);
+        box-shadow: 0 0 30px rgba(165, 72, 214, 0.2);
         transform: translateY(0);
     }
     50% { 
