@@ -5,49 +5,50 @@ document.addEventListener('DOMContentLoaded', () => {
     setBackgroundCards();
 });
 
+
 async function drawRandomCard() {
-  try {
-    const card = cards[Math.floor(Math.random() * cards.length)];
-    const cardPlaceholder = document.querySelector(".card-placeholder");
-    const cardDescription = document.querySelector(".card-description");
-    const cardDescriptionExtra = document.querySelector(".card-description-extra");
-    const backgroundCards = document.querySelector(".background-cards");
+    try {
+        const card = cards[Math.floor(Math.random() * cards.length)];
+        const cardPlaceholder = document.querySelector(".card-placeholder");
+        const cardDescription = document.querySelector(".card-description");
+        const cardDescriptionExtra = document.querySelector(".card-description-extra");
+        const backgroundCards = document.querySelector(".background-cards");
 
-    // Hide background cards
-    backgroundCards.classList.add('hide');
+        // Hide background cards
+        backgroundCards.classList.add('hide');
 
-    // Clear placeholder and create new image
-    document.querySelector('header').style.display = 'none';
-    cardPlaceholder.innerHTML = "<div class='loading'>Loading your card...</div>";
+        // Clear placeholder and create new image
+        document.querySelector('header').style.display = 'none';
+        cardPlaceholder.innerHTML = "<div class='loading'>Loading your card...</div>";
 
-    // Create and load image
-    const img = document.createElement("img");
-    img.className = "card-image";
-    
-    // Wait for image to load
-    await new Promise((resolve, reject) => {
-      img.onload = resolve;
-      img.onerror = reject;
-      img.src = `./assets/${card.name}.jpg`;
-      img.alt = card.name;
-    });
+        // Create and load image
+        const img = document.createElement("img");
+        img.className = "card-image";
+        
+        // Wait for image to load
+        await new Promise((resolve, reject) => {
+            img.onload = resolve;
+            img.onerror = reject;
+            img.src = `./assets/${card.name}.jpg`;
+            img.alt = card.name;
+        });
 
-    // Clear loading message and add image
-    cardPlaceholder.innerHTML = "";
-    cardPlaceholder.appendChild(img);
+        // Clear loading message and add image
+        cardPlaceholder.innerHTML = "";
+        cardPlaceholder.appendChild(img);
 
-    // Fade in text with slight delay for aesthetics
-    setTimeout(() => {
-      cardDescription.textContent = card.meaning;
-      cardDescriptionExtra.textContent = card.extra[Math.floor(Math.random() * card.extra.length)];
-      cardDescription.style.opacity = 1;
-      cardDescriptionExtra.style.opacity = 1;
-    }, 150);
+        // Fade in text with slight delay
+        setTimeout(() => {
+            cardDescription.textContent = card.meaning;
+            cardDescriptionExtra.textContent = card.extra[Math.floor(Math.random() * card.extra.length)];
+            cardDescription.style.opacity = 1;
+            cardDescriptionExtra.style.opacity = 1;
+        }, 150);
 
-  } catch (error) {
-    console.error('Error loading card:', error);
-    cardPlaceholder.innerHTML = "Error loading card. Please try again.";
-  }
+    } catch (error) {
+        console.error('Error loading card:', error);
+        cardPlaceholder.innerHTML = "Error loading card. Please try again.";
+    }
 }
 
 function showPopup() {
@@ -108,13 +109,6 @@ cardButton.addEventListener("keypress", (event) => {
   }
 });
 
-// Add function to reset the view
-function resetView() {
-    const backgroundCards = document.querySelector(".background-cards");
-    backgroundCards.classList.remove('hide');
-    document.querySelector('header').style.display = 'block';
-    setBackgroundCards(); // Add new random cards
-}
 // Card arch on screen load
 function getRandomCards(count) {
   // Create a copy of the cards array to avoid modifying the original
@@ -131,7 +125,6 @@ function getRandomCards(count) {
   
   return randomCards;
 }
-
 function setBackgroundCards() {
   const backgroundCards = document.querySelectorAll('.background-card');
   const randomCards = getRandomCards(backgroundCards.length);
