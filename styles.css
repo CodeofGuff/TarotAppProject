@@ -227,7 +227,7 @@ h1 {
     transform: rotate(var(--rotation)) translateY(-50px);
     box-shadow: 0 0 15px rgba(235, 179, 40, 0.1);
     opacity: 0;
-    animation: fadeInCard 10s ease forwards infinite, pulse 8s ease-in-out infinite, 
+    animation: fadeInCard 10s ease-in-out forwards infinite, pulse 8s ease-in-out infinite, 
     smoothPulseGlowGold 4s ease-out infinite;
     transition: opacity 0.5s ease-out, background-image 0.3s ease-in-out;
   }
