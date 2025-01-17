@@ -353,7 +353,7 @@ h1 {
 }
 
 .background-card {
-    position: absolute;
+    position: relative;
     width: 100px;
     height: 200px;
     background-size: cover;
