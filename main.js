@@ -108,7 +108,6 @@ cardButton.addEventListener("keypress", (event) => {
     handleCardDraw();
   }
 });
-
 // Card arch on screen load
 function getRandomCards(count) {
   // Create a copy of the cards array to avoid modifying the original
@@ -122,9 +121,9 @@ function getRandomCards(count) {
       // Remove selected card to avoid duplicates
       cardsCopy.splice(randomIndex, 1);
   }
-  
   return randomCards;
 }
+
 function setBackgroundCards() {
   const backgroundCards = document.querySelectorAll('.background-card');
   const randomCards = getRandomCards(backgroundCards.length);
