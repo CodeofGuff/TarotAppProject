@@ -338,14 +338,16 @@ h1 {
     transform: translateY(0);
   }
 
+
   50% {
     box-shadow: 0 0 120px rgba(146, 62, 191, 0.8);
-    transform: translateY(-5px);
+    transform: translateY(-12px);
   }
+
 
   100% {
     box-shadow: 0 0 30px rgba(140, 58, 184, 0.2);
-    transform: translateY(0);
+    transform: translateY(0px);
   }
 }
 
