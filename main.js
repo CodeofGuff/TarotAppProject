@@ -1,11 +1,20 @@
 import { cards } from "./cards.js";
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    setBackgroundCards();
+});
+
 async function drawRandomCard() {
   try {
     const card = cards[Math.floor(Math.random() * cards.length)];
     const cardPlaceholder = document.querySelector(".card-placeholder");
     const cardDescription = document.querySelector(".card-description");
     const cardDescriptionExtra = document.querySelector(".card-description-extra");
+    const backgroundCards = document.querySelector(".background-cards");
+
+    // Hide background cards
+    backgroundCards.classList.add('hide');
 
     // Clear placeholder and create new image
     document.querySelector('header').style.display = 'none';
@@ -81,6 +90,7 @@ confirmButton.addEventListener("click", async () => {
 
 cancelButton.addEventListener("click", () => {
   hidePopup();
+  resetView();
 });
 
 // Keyboard accessibility
@@ -97,3 +107,36 @@ cardButton.addEventListener("keypress", (event) => {
     handleCardDraw();
   }
 });
+
+// Add function to reset the view
+function resetView() {
+    const backgroundCards = document.querySelector(".background-cards");
+    backgroundCards.classList.remove('hide');
+    document.querySelector('header').style.display = 'block';
+    setBackgroundCards(); // Add new random cards
+}
+// Card arch on screen load
+function getRandomCards(count) {
+  // Create a copy of the cards array to avoid modifying the original
+  let cardsCopy = [...cards];
+  let randomCards = [];
+  
+  // Get random cards
+  for(let i = 0; i < count; i++) {
+      const randomIndex = Math.floor(Math.random() * cardsCopy.length);
+      randomCards.push(cardsCopy[randomIndex]);
+      // Remove selected card to avoid duplicates
+      cardsCopy.splice(randomIndex, 1);
+  }
+  
+  return randomCards;
+}
+
+function setBackgroundCards() {
+  const backgroundCards = document.querySelectorAll('.background-card');
+  const randomCards = getRandomCards(backgroundCards.length);
+  
+  backgroundCards.forEach((card, index) => {
+      card.style.backgroundImage = `url('./assets/${randomCards[index].name}.jpg')`;
+  });
+}

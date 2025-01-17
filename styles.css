@@ -230,6 +230,8 @@ h1 {
     .card-button:hover {
         animation: smoothPulseGlowGold 4s ease-in-out infinite;
     }
+
+  
 }
 
 /* New media query for tablets */
@@ -273,7 +275,9 @@ h1 {
     .card-button {
         padding: 0.9rem 1.8rem;
         font-size: 1.1rem;
+
     }
+
 }
 
 /* Animations */
@@ -315,4 +319,112 @@ h1 {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+/* Add these new styles */
+.background-cards {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.card-arch {
+    position: absolute;
+    width: 90%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.top-arch {
+    top: 5%;
+    transform: translateX(-50%) rotate(180deg);
+}
+
+.bottom-arch {
+    bottom: 5%;
+}
+
+.background-card {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(235, 179, 40, 0.3);
+    border-radius: 8px;
+    transform-origin: bottom center;
+    transform: rotate(var(--rotation)) translateY(-50px);
+    box-shadow: 0 0 15px rgba(235, 179, 40, 0.1);
+    opacity: 0;
+    animation: fadeInCard 0.9s ease-out forwards var(--delay);
+    transition: opacity 0.5s ease-out, background-image 0.3s ease-in-out;
+}
+
+.background-cards.hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-out;
+    z-index: -1;
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: rotate(var(--rotation)) translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(var(--rotation)) translateY(-50px);
+    }
+}
+
+/* Update media queries */
+@media (max-width: 768px) {
+    .top-arch {
+        top: 2%;
+    }
+    
+    .bottom-arch {
+        bottom: 2%;
+    }
+    
+    .background-card {
+        width: 70px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .background-card {
+        width: 50px;
+        height: 100px;
+    }
+}
+
+/* Add new animation styles */
+.background-cards.circle {
+    opacity: 1;
+    z-index: 100;
+}
+
+.background-cards.circle .background-card {
+    animation: circleRotate 2s linear forwards;
+    transform-origin: center center;
+}
+
+@keyframes circleRotate {
+    0% {
+        transform: rotate(var(--rotation)) translateY(-50px);
+    }
+    100% {
+        transform: rotate(calc(var(--rotation) + 360deg)) translateY(-50px) scale(0.8);
+    }
 }
